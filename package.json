@@ -1,0 +1,39 @@
+{
+  "name": "vscode-enum-hover-to-value",
+  "displayName": "VSCode Enum Hover To Value",
+  "description": "Shows Python Enum values when hovering over members (like PyCharm or other Jetbrains Product)",
+  "version": "0.0.1",
+  "publisher": "fahid-latheef",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FahidLatheef/vscode-enum-hover-to-value.git"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:python"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "python",
+        "aliases": ["Python"],
+        "extensions": [".py"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "echo \"No test yet\""
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^3.7.1"
+  }
+}
