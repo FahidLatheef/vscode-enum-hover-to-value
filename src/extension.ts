@@ -48,7 +48,6 @@ export function activate(context: vscode.ExtensionContext) {
 
             const md = new vscode.MarkdownString(undefined, true);
             md.isTrusted = true;
-            md.appendMarkdown("### Enum Value\n");
             md.appendCodeblock(`${className}.${member} = ${value}`, "python");
 
             return new vscode.Hover(md);
